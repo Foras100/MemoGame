@@ -1,0 +1,150 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Memo-Game</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
+        <style>
+        .ver {
+                        opacity: 1.0;
+        }
+        .ocultar {
+                opacity: 0.0;
+        }
+
+
+        .memo-game {
+                width: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+        }
+        .memo-board {
+                width: calc(20% - 10px);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                }
+        .memo-card {
+                width: calc(21% - 10px);
+                height: 98px;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+                display: flex;
+                margin: 5px;
+                padding: 2px;
+        }
+        .memo-card img {
+                width: 100%;
+                position: absolute;
+                transition: all;
+        }
+        .card-container {
+                width: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: stretch;
+        }
+        </style>
+</head>
+<body>
+        <div class="memo-game">
+                <div class="memo-board">
+                        <div class="card-container">
+                                <div>
+                                        <h1 class="display-4">Memo Game</h1>                              
+                                </div>
+                        </div>
+                        <div class="card-container">
+                                <div class="memo-card" data-id="1" data-value="chrome" onclick="destapar(1)">
+                                        <img id="ask1" class="ver" src="img/ask.svg">
+                                        <img id="carta1" class="ocultar" src="img/chrome.svg">
+                                </div>
+                                <div class="memo-card" data-id="2" data-value="facebook" onclick="destapar(2)">
+                                        <img id="ask2" class="ver" src="img/ask.svg">
+                                        <img id="carta2" class="ocultar" src="img/facebook.svg">
+                                </div>
+                                <div class="memo-card" data-id="3" data-value="chrome" onclick="destapar(3)">
+                                        <img id="ask3" class="ver" src="img/ask.svg">
+                                        <img id="carta3" class="ocultar" src="img/chrome.svg">
+                                </div>
+                                <div class="memo-card" data-id="4" data-value="instagram" onclick="destapar(4)">
+                                        <img id="ask4" class="ver" src="img/ask.svg">
+                                        <img id="carta4" class="ocultar" src="img/instagram.svg">
+                                </div>
+
+
+                                <div class="memo-card" id="5" data-value="explorer" onclick="destapar(5)">
+                                        <img id="ask5" class="ver" src="img/ask.svg">
+                                        <img id="carta5" class="ocultar" src="img/explorer.svg">
+                                </div>
+                                <div class="memo-card" data-id="6" data-value="firefox" onclick="destapar(6)">
+                                        <img id="ask6" class="ver" src="img/ask.svg">
+                                        <img id="carta6" class="ocultar" src="img/firefox.svg">
+                                </div>
+                                <div class="memo-card" data-id="7" data-value="google" onclick="destapar(7)">
+                                        <img id="ask7" class="ver" src="img/ask.svg">
+                                        <img id="carta7" class="ocultar" src="img/google.svg">
+                                </div>
+                                <div class="memo-card" data-id="8" data-value="firefox" onclick="destapar(8)">
+                                        <img id="ask8" class="ver" src="img/ask.svg">
+                                        <img id="carta8" class="ocultar" src="img/firefox.svg">
+                                </div>
+
+
+                                <div class="memo-card" id="9" data-value="instagram" onclick="destapar(9)">
+                                        <img id="ask9" class="ver" src="img/ask.svg">
+                                        <img id="carta9" class="ocultar" src="img/instagram.svg">
+                                </div>
+                                <div class="memo-card" data-id="10" data-value="opera" onclick="destapar(10)">
+                                        <img id="ask10" class="ver" src="img/ask.svg">
+                                        <img id="carta10" class="ocultar" src="img/opera.svg">
+                                </div>
+                                <div class="memo-card" data-id="11" data-value="facebook" onclick="destapar(11)">
+                                        <img id="ask11" class="ver" src="img/ask.svg">
+                                        <img id="carta11" class="ocultar" src="img/facebook.svg">
+                                </div>
+                                <div class="memo-card" data-id="12" data-value="twitter" onclick="destapar(12)">
+                                        <img id="ask12" class="ver" src="img/ask.svg">
+                                        <img id="carta12" class="ocultar" src="img/twitter.svg">
+                                </div>
+
+
+                                <div class="memo-card" id="13" data-value="google" onclick="destapar(13)">
+                                        <img id="ask13" class="ver" src="img/ask.svg">
+                                        <img id="carta13" class="ocultar" src="img/google.svg">
+                                </div>
+                                <div class="memo-card" data-id="14" data-value="opera" onclick="destapar(14)">
+                                        <img id="ask14" class="ver" src="img/ask.svg">
+                                        <img id="carta14" class="ocultar" src="img/opera.svg">
+                                </div>
+                                <div class="memo-card" data-id="15" data-value="twitter" onclick="destapar(15)">
+                                        <img id="ask15" class="ver" src="img/ask.svg">
+                                        <img id="carta15" class="ocultar" src="img/twitter.svg">
+                                </div>
+                                <div class="memo-card" data-id="16" data-value="explorer" onclick="destapar(16)">
+                                        <img id="ask16" class="ver" src="img/ask.svg">
+                                        <img id="carta16" class="ocultar" src="img/explorer.svg">
+                                </div>
+
+
+
+
+
+                                <div class="card-container">
+                                        <div class="footer">
+                                                <label>Total de intentos: </label><label id="intentos" class="text-center"> 0</label>
+                                                <button onclick=reset() type="button" class="btn btn-info">RESET</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script type="text/javascript" src="js.js"></script>
+</body>
+
+</html>
